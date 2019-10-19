@@ -19,7 +19,8 @@ export class AppComponent implements OnInit{
     for( let i = 0; i < 10; i++) {
       // let random = Math.random()
       // numberArray.push(random)
-      numberArray.push(Math.random())
+      // (0-0.99)*10 =>0-9.9
+      numberArray.push(Math.floor(Math.random()*100))
     }
     return numberArray
   }
