@@ -8,11 +8,13 @@ import { NumberSymbol } from '@angular/common';
 })
 export class AppComponent implements OnInit{
   numbers = [6, 7, 8]
+  numbersToString = ""
   title = 'math-test';
 
   ngOnInit(){
-    this.numbers = this.getNumbers()
-  }
+    this.numbers = this.getNumbers() // numberArray
+    this.numbersToString = this.convertNumbersToNumbersString()
+}
 
   getNumbers () {
     let numberArray = []
@@ -20,9 +22,17 @@ export class AppComponent implements OnInit{
       // let random = Math.random()
       // numberArray.push(random)
       // (0-0.99)*10 =>0-9.9
+
       numberArray.push(Math.floor(Math.random()*100))
     }
     return numberArray
-  }
-}
 
+  }
+
+  convertNumbersToNumbersString() {
+    // [1, 23, 44] 1+23+44
+  let convertToString = this.numbers.join("+")
+  return convertToString;
+  }
+
+}
