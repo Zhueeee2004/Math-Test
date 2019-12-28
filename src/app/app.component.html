@@ -1,5 +1,8 @@
-<h1>{{title}}</h1>
-<p *ngFor="let number of numbers">{{number}}</p>
-<p>{{numbersToString}}</p>
-<p>Total {{sumStrings}}</p>
-
+<h1>{{ title }}</h1>
+<p *ngFor="let number of numbers">{{ number }}</p>
+<p>{{ numbersToString }}</p>
+<p>Total = {{ sumStrings }}</p>
+<h2>{{ example }}</h2>
+<h2>{{ completeInsultGenerator }}</h2>
+<input type="text" id="box1" value="text here please" #userInput />
+<button (click)="checkUserInput(userInput.value)">Add</button>
